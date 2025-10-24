@@ -1,89 +1,176 @@
+
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
+// App Color Scheme
 export const colors = {
-  primary: '#162456',    // Material Blue
-  secondary: '#193cb8',  // Darker Blue
-  accent: '#64B5F6',     // Light Blue
-  background: '#101824',  // Keeping dark background
-  backgroundAlt: '#162133',  // Keeping dark background
-  text: '#e3e3e3',       // Keeping light text
-  grey: '#90CAF9',       // Light Blue Grey
-  card: '#193cb8',       // Keeping dark card background
+  background: '#f9f9f9',
+  backgroundDark: '#121212',
+  text: '#212121',
+  textDark: '#e3e3e3',
+  textSecondary: '#757575',
+  textSecondaryDark: '#b0b0b0',
+  primary: '#3f51b5',
+  primaryDark: '#5c6bc0',
+  secondary: '#f44336',
+  secondaryDark: '#ef5350',
+  accent: '#ff4081',
+  accentDark: '#ff5a92',
+  card: '#ffffff',
+  cardDark: '#1e1e1e',
+  highlight: '#bbdefb',
+  highlightDark: '#1976d2',
+  border: '#e0e0e0',
+  borderDark: '#333333',
+  success: '#4caf50',
+  warning: '#ff9800',
+  error: '#f44336',
+  disabled: '#bdbdbd',
 };
 
 export const buttonStyles = StyleSheet.create({
-  instructionsButton: {
+  primary: {
     backgroundColor: colors.primary,
-    alignSelf: 'center',
-    width: '100%',
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  backButton: {
-    backgroundColor: colors.backgroundAlt,
-    alignSelf: 'center',
-    width: '100%',
+  secondary: {
+    backgroundColor: colors.secondary,
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  outline: {
+    backgroundColor: 'transparent',
+    borderWidth: 2,
+    borderColor: colors.primary,
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  outlineText: {
+    color: colors.primary,
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
 
 export const commonStyles = StyleSheet.create({
-  wrapper: {
-    backgroundColor: colors.background,
-    width: '100%',
-    height: '100%',
-  },
   container: {
     flex: 1,
     backgroundColor: colors.background,
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
+  },
+  containerDark: {
+    flex: 1,
+    backgroundColor: colors.backgroundDark,
   },
   content: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    maxWidth: 800,
-    width: '100%',
+    padding: 20,
+  },
+  card: {
+    backgroundColor: colors.card,
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+    elevation: 3,
+  },
+  cardDark: {
+    backgroundColor: colors.cardDark,
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.3)',
+    elevation: 3,
   },
   title: {
-    fontSize: 24,
-    fontWeight: '800',
-    textAlign: 'center',
+    fontSize: 28,
+    fontWeight: '700',
     color: colors.text,
-    marginBottom: 10
+    marginBottom: 8,
+  },
+  titleDark: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: colors.textDark,
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: colors.text,
+    marginBottom: 12,
+  },
+  subtitleDark: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: colors.textDark,
+    marginBottom: 12,
   },
   text: {
     fontSize: 16,
-    fontWeight: '500',
     color: colors.text,
-    marginBottom: 8,
     lineHeight: 24,
-    textAlign: 'center',
   },
-  section: {
-    width: '100%',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+  textDark: {
+    fontSize: 16,
+    color: colors.textDark,
+    lineHeight: 24,
   },
-  buttonContainer: {
-    width: '100%',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+  textSecondary: {
+    fontSize: 14,
+    color: colors.textSecondary,
+    lineHeight: 20,
   },
-  card: {
-    backgroundColor: colors.backgroundAlt,
-    borderColor: colors.grey,
+  textSecondaryDark: {
+    fontSize: 14,
+    color: colors.textSecondaryDark,
+    lineHeight: 20,
+  },
+  input: {
+    backgroundColor: colors.card,
     borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
-    marginVertical: 8,
-    width: '100%',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.1)',
-    elevation: 2,
+    borderColor: colors.border,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 16,
+    color: colors.text,
+    marginBottom: 16,
   },
-  icon: {
-    width: 60,
-    height: 60,
-    tintColor: "white",
+  inputDark: {
+    backgroundColor: colors.cardDark,
+    borderWidth: 1,
+    borderColor: colors.borderDark,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 16,
+    color: colors.textDark,
+    marginBottom: 16,
+  },
+  centerContent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  spaceBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 });
